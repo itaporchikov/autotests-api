@@ -48,7 +48,7 @@ class CoursesClient(APIClient):
         :param query: Словарь с userId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.get("/api/v1/courses/", params=query)
+        return self.get("/api/v1/courses", params=query)
 
     def get_course_api(self, course_id: str) -> Response:
         """
@@ -67,7 +67,7 @@ class CoursesClient(APIClient):
         previewFileId, createdByUserId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("/api/v1/courses/", json=request)
+        return self.post("/api/v1/courses", json=request)
 
     def update_course_api(self, course_id: str, request: UpdateCourseRequestDict) -> Response:
         """
