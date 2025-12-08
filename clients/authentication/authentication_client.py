@@ -1,6 +1,6 @@
 from httpx import Response
 
-from clients.api_client import ApiClient
+from clients.api_client import APIClient
 
 from typing import TypedDict
 
@@ -20,7 +20,7 @@ class RefreshRequestDict(TypedDict):
     refreshToken: str
 
 
-class AuthenticationClient(ApiClient):
+class AuthenticationClient(APIClient):
     """
     Клиент для работы с /api/v1/authentication
     """
