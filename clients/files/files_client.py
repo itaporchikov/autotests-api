@@ -49,7 +49,7 @@ def get_files_client(user: AuthenticationUserSchema) -> FilesClient:
     """
     Функция создаёт экземпляр FilesClient с уже настроенным HTTP-клиентом.
 
-    :param user: Объект AuthenticationUserDict с email и паролем пользователя.
+    :param user: Объект AuthenticationUserSchema с email и паролем пользователя.
     :return: Готовый к использованию FilesClient.
     """
     return FilesClient(client=get_private_http_client(user))

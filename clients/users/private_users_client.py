@@ -55,7 +55,7 @@ def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClie
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.
 
-    :param user: Объект AuthenticationUserDict с email и паролем пользователя.
+    :param user: Объект AuthenticationUserSchema с email и паролем пользователя.
     :return: Готовый к использованию PrivateUsersClient.
     """
     return PrivateUsersClient(client=get_private_http_client(user))
