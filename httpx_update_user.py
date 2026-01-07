@@ -1,8 +1,8 @@
 import httpx
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 create_user_payload = {
-    "email": get_random_email(),
+    "email": fake.email(),
     "password": "Test12345",
     "lastName": "Uno",
     "firstName": "Savage",
@@ -21,7 +21,7 @@ login_response_data = login_response.json()
 print("Login data:", login_response_data)
 
 update_user_payload = {
-    "email": get_random_email(),
+    "email": fake.email(),
     "lastName": "New",
     "firstName": "Updated",
     "middleName": "Good"
