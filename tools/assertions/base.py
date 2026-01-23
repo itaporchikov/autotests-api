@@ -20,9 +20,9 @@ def assert_equal(actual: Any, expected: Any, name: str) -> None:
     """
     Проверяет, что фактическое значение равно ожидаемому.
 
-    :param name: Название проверяемого значения.
     :param actual: Фактическое значение.
     :param expected: Ожидаемое значение.
+    :param name: Название проверяемого значения.
     :raises AssertionError: Если фактическое значение не равно ожидаемому.
     """
     assert actual == expected, (
